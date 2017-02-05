@@ -132,7 +132,21 @@ object ScalaBasics {
    * @param s the string to split
    * @return the split string as a tuple
    */
-  def splitInHalf(s: String): (String, String) = ???
+  def splitInHalf(s: String): (String, String) = {
+    var stringLength = s.length
+    if (stringLength % 2 == 0) {
+      var firstHalf = s.substring(0, stringLength/2)
+      var secondHalf = s.substring(stringLength/2, stringLength)
+      val twoHalves = (firstHalf, secondHalf)
+      twoHalves
+    }
+    else {
+      var firstHalf = s.substring(0, stringLength/2)
+      var secondHalf = s.substring(stringLength/2, stringLength)
+      val twoHalves = (firstHalf, secondHalf)
+      twoHalves
+    }
+  }
 
   /**
    * Determines if the given string s is a palindrome.
