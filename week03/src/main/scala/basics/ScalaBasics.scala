@@ -77,16 +77,9 @@ object ScalaBasics {
   def minFor(r: Array[Int]): Int = {
     var result : Int = 999
     for (i <- r) {
-      println(i)
       result = result.min(i)
     }
-    println("Result is " + result)
     result
-//    var result : Int = 0
-//    for (i <- 1 to 9) {
-//      result+= i
-//    }
-//    result
   }
 
 
