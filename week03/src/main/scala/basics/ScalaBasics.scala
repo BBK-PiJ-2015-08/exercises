@@ -133,16 +133,15 @@ object ScalaBasics {
    * @return the split string as a tuple
    */
   def splitInHalf(s: String): (String, String) = {
-    var stringLength = s.length
-    if (stringLength % 2 == 0) {
-      var firstHalf = s.substring(0, stringLength/2)
-      var secondHalf = s.substring(stringLength/2, stringLength)
+    if (s.length % 2 == 0) {
+      var firstHalf = s.substring(0, s.length/2)
+      var secondHalf = s.substring(s.length/2, s.length)
       val twoHalves = (firstHalf, secondHalf)
       twoHalves
     }
     else {
-      var firstHalf = s.substring(0, stringLength/2)
-      var secondHalf = s.substring(stringLength/2, stringLength)
+      var firstHalf = s.substring(0, s.length/2)
+      var secondHalf = s.substring(s.length/2, s.length)
       val twoHalves = (firstHalf, secondHalf)
       twoHalves
     }
