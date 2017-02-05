@@ -137,10 +137,7 @@ object ScalaBasics {
       (s.substring(0, s.length/2), s.substring(s.length/2, s.length))
     }
     else {
-      var firstHalf = s.substring(0, s.length/2)
-      var secondHalf = s.substring(s.length/2, s.length)
-      val twoHalves = (firstHalf, secondHalf)
-      twoHalves
+      (s.substring(0, s.length/2), s.substring(s.length/2, s.length))
     }
   }
 
