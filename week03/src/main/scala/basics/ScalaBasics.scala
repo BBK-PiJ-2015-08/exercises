@@ -106,7 +106,10 @@ object ScalaBasics {
    * @param b a big integer
    * @return the base 36 equivalent
    */
-  def base36(b: BigInt): String = ???
+  def base36(b: BigInt): String = {
+    val equivalent = b.toString( 36 )
+    equivalent
+  }
 
   /**
    * Splits the String s in half.
