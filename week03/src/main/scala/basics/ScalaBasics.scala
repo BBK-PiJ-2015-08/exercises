@@ -81,8 +81,7 @@ object ScalaBasics {
     }
     result
   }
-
-
+  
   /**
    * Write a function called minRecursive that returns the minimum integer in the Array r.
    *
