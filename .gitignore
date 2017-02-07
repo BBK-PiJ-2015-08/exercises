@@ -510,9 +510,6 @@ week04/project/target/streams/runtime/internalDependencyClasspath/$global/stream
 week04/project/target/streams/runtime/managedClasspath/$global/streams/export
 week04/project/target/streams/runtime/unmanagedClasspath/$global/streams/export
 week04/project/target/streams/runtime/unmanagedJars/$global/streams/export
-week04/src/main/scala/functions/functions.scala
-week04/src/test/scala/functions/FunctionsTestSuite.scala
-week04/src/test/scala/support/TreeTraversals.scala
 week04/target/.history
 week04/target/resolution-cache/exercises-week04/exercises-week04$sources_2.12/1.0/resolved.xml.properties
 week04/target/resolution-cache/exercises-week04/exercises-week04$sources_2.12/1.0/resolved.xml.xml
