@@ -14,7 +14,7 @@ object Funcs {
     */
   def tail[A](ls: List[A]): List[A] =
     ls match {
-      case h :: t => t
+      case hd :: tl => tl
       case Nil => throw new IllegalArgumentException
     }
 
@@ -29,7 +29,7 @@ object Funcs {
     **/
   def setHead[A](ls: List[A], a: A): List[A] =
     ls match {
-      case h :: t => a :: t
+      case hd :: tl => a :: tl
       case Nil => List(a)
     }
 
@@ -44,9 +44,9 @@ object Funcs {
   def drop[A](ls: List[A], n: Int): List[A] =
     ls match {
       case Nil => Nil
-      case h :: t => n match {
-        case 1 => t
-        case _ => drop(t, n-1)
+      case hd :: tl => n match {
+        case 1 => tl
+        case _ => drop(tl, n-1)
       }
     }
 
@@ -61,8 +61,8 @@ object Funcs {
   def init[A](ls: List[A]): List[A] =
     ls match {
       case Nil => throw new IllegalArgumentException
-      case h :: Nil => Nil
-      case h :: t => h :: init(t)
+      case hd :: Nil => Nil
+      case hd :: tl => hd :: init(tl)
     }
   // LIST FOLDING
 
