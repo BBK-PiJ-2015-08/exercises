@@ -565,3 +565,12 @@ week04/target/streams/test/externalDependencyClasspath/$global/streams/export
 week04/target/streams/test/managedClasspath/$global/streams/export
 week04/target/streams/test/unmanagedClasspath/$global/streams/export
 week04/target/streams/test/unmanagedJars/$global/streams/export
+week04/target/scala-2.12/classes/functions/Funcs$.class
+week04/target/scala-2.12/classes/functions/Funcs.class
+week04/target/scala-2.12/test-classes/functions/FunctionsTestSuite.class
+week04/target/scala-2.12/test-classes/support/TreeTraversals$.class
+week04/target/scala-2.12/test-classes/support/TreeTraversals$IfExprTraverser.class
+week04/target/scala-2.12/test-classes/support/TreeTraversals$MethodCallTraverser.class
+week04/target/scala-2.12/test-classes/support/TreeTraversals$MethodTraverser.class
+week04/target/scala-2.12/test-classes/support/TreeTraversals$ValTraverser.class
+week04/target/scala-2.12/test-classes/support/TreeTraversals.class
