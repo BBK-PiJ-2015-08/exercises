@@ -97,6 +97,11 @@ object ScalaBasics {
    * @return the minimum integer in the array
    */
   def minRecursive(r: Array[Int]): Int = {
+    if (r.isEmpty) {
+      return 1;
+    } else {
+      r.min
+    }
   }
 
   /**
