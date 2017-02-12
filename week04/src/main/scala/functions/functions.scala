@@ -99,7 +99,10 @@ object Funcs {
     case hd :: tl => hd + sum(tl)
   }
 
-  def product(ls: List[Double]): Double = ???
+  def product(ls: List[Double]): Double = ls match {
+    case Nil => 1
+    case hd :: tl => hd * product(tl)
+  }
 
   def length[A](ls: List[A]): Int = ???
 
