@@ -20,8 +20,8 @@ class ClassesTestSuite extends FunSuite {
     assert((new Counter(7).dec(6).count) == 1)
   }
 
-//  test("Use returns the right result") {
-//    assert((new Counter(10).inc.dec.inc.inc.count) == 12)
-//  }
+  test("Use returns the right result") {
+    assert((new Counter(10).inc().dec().inc().inc().count) == 12)
+  }
 
 }
