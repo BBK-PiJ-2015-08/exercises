@@ -7,5 +7,5 @@ class Counter(val count: Int) {
 
   def inc(defaultInc: Int = 1) = new Counter(count + defaultInc)
 
-  def dec = new Counter(count - 1)
+  def dec(defaultInc: Int = 1) = new Counter(count - defaultInc)
 }
