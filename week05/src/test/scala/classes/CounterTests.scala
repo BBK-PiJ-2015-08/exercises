@@ -1,6 +1,5 @@
 package classes
 
-import classes.Counter
 import org.scalatest.FunSuite
 
 class ClassesTestSuite extends FunSuite {
