@@ -12,8 +12,12 @@ class ClassesTestSuite extends FunSuite {
     assert((new Counter(1).inc(5).count) == 6)
   }
 
-  test("Decrement called once on initial count 3 results in 2") {
-    assert((new Counter(3).dec.count) == 2)
+  test("Decrement called once with default value on initial count 3 results in 2") {
+    assert((new Counter(3).dec().count) == 2)
+  }
+
+  test("Decrement called once on initial count 7 with parameter 6 results in 1") {
+    assert((new Counter(7).dec(6).count) == 1)
   }
 
 //  test("Use returns the right result") {
