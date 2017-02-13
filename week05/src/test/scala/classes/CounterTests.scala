@@ -3,6 +3,9 @@ package classes
 import org.scalatest.FunSuite
 
 class ClassesTestSuite extends FunSuite {
+  test("Initial value of count is 0") {
+    assert(new Counter().count == 0)
+  }
   test("Increment called with default value on initial count 1 results in 2") {
     assert((new Counter(1).inc().count) == 2)
   }
