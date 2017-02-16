@@ -25,4 +25,12 @@ object Film {
       film2
     }
   }
+
+  def oldestDirectorAtTheTime(film1: Film, film2: Film): Director = {
+    if( (film1.yearOfRelease - film1.director.yearOfBirth) > (film2.yearOfRelease - film2.director.yearOfBirth)) {
+      film1.director
+    } else {
+      film2.director
+    }
+  }
 }
