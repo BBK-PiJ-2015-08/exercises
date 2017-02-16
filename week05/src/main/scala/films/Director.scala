@@ -8,7 +8,7 @@ class Director(val firstName: String, val lastName: String, val yearOfBirth: Int
 }
 
 object Director {
-  def apply(firstName: String, lastName: String, yearOfBirth: Int) = {
+  def apply(firstName: String, lastName: String, yearOfBirth: Int): Director = {
     new Director(firstName, lastName, yearOfBirth)
   }
 
