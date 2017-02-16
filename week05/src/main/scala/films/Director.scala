@@ -12,5 +12,11 @@ object Director {
     new Director(firstName, lastName, yearOfBirth)
   }
 
-
+  def older(director1: Director, director2: Director): Director = {
+    if(director1.yearOfBirth < director2.yearOfBirth) {
+      director1
+    } else {
+      director2
+    }
+  }
 }
