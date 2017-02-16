@@ -18,5 +18,11 @@ object Film {
     new Film(name, yearOfRelease, imdbRating, director)
   }
 
-  
+  def highestRating(film1: Film, film2: Film): Film = {
+    if(film1.imdbRating > film2.imdbRating) {
+      film1
+    } else {
+      film2
+    }
+  }
 }
