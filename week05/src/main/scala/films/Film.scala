@@ -12,3 +12,11 @@ class Film(val name: String, val yearOfRelease: Int, val imdbRating: Double, val
     new Film(name, yearOfRelease, imdbRating, director)
   }
 }
+
+object Film {
+  def apply(name: String, yearOfRelease: Int, imdbRating: Double, director: Director): Film = {
+    new Film(name, yearOfRelease, imdbRating, director)
+  }
+
+  
+}
