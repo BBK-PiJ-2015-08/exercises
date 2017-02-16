@@ -3,7 +3,7 @@ package films
 /**
   * Created by jade on 16/02/2017.
   */
-class Film(val name: String, val yearOfRelease: Int, val imdbRating: Double, val director: Director) {
+case class Film(name: String, yearOfRelease: Int, imdbRating: Double, director: Director) {
   def directorsAge: Int = yearOfRelease - director.yearOfBirth
 
   def isDirectedBy(director: Director): Boolean =  director == this.director

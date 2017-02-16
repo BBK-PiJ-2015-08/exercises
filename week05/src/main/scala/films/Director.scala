@@ -3,7 +3,7 @@ package films
 /**
   * Created by jade on 16/02/2017.
   */
-class Director(val firstName: String, val lastName: String, val yearOfBirth: Int) {
+case class Director(firstName: String, lastName: String, yearOfBirth: Int) {
   def name: String = firstName + lastName
 }
 
