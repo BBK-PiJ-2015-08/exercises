@@ -26,4 +26,8 @@ class ClassesTestSuite extends FunSuite {
     assert((new Counter(10).inc().dec().inc().inc().count) == 12)
   }
 
+  test("Counter's adjust method returns the right result when it accepts an Adder of 3") {
+    assert(new Counter(5).adjust(new Adder(4)) == new Counter(9))
+  }
+
 }
