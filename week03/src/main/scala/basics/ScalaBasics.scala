@@ -172,9 +172,9 @@ object ScalaBasics {
    */
   def isPalindrome(s: String): Boolean = {
     val normalisedS = s.replaceAll("[.?,;!-' ]", "").toLowerCase()
-    val reversed = normalisedS.reverse
-    println("normalisedS is " + normalisedS + " and reversed is " + reversed)
-
+    val reversed = for ( i <- normalisedS.reverse) yield i
+    if (reversed.equals(normalisedS))true
+    else false
   }
 
   /**
