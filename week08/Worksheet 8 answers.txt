@@ -29,3 +29,14 @@ You should use the Bridge pattern when you want to decouple an abstraction from 
 
 For example, you might want to create remote controls that work differently depending on specific televisions, but share some functions in common. Your first abstract class defines the buttons that will define volume for all devices, and subsequent classes will define functions that vary.
 
+
+11a) What is the Composite Pattern?
+The Composite pattern allows you to represent part-whole hierarchies, where components can be further divided into smaller components. It allows you to structure data, or represent the inner working of every part of a whole object individually.
+
+
+11b) Under what conditions would you use a Composite Design Pattern?
+You should use a Composite pattern when you want to be able to treat individual objects and compositions of objects uniformly.
+
+11c) What are the four participants of the Composite Design Pattern?
+Client, Component, Composite and Leaf
+
