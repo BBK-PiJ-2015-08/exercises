@@ -5,8 +5,10 @@ The strategy pattern defines a family of algorithms, encapsulates each one and m
 It is appropriate to use the Strategy pattern when you want to define a class that will have one behaviour that is similar to all the other behaviours in a list.
 You want a class object to be able to choose from one of several different algorithms.
 
+
 3) When is it appropriate to use the Abstract Factory Design Pattern?
 You should use the Abstract Factory pattern to create families of related objects without specifying their concrete classes. This is helpful when you have many objects that can be added, or changed dynamically during runtime.
+
 
 5. “In general, the details of object construction, such as instantiating and initialising the components that comprise the object, are kept within the object, often as part of its constructor.”
 Comment on this statement with reference to modularity and construction bloat.
@@ -14,13 +16,16 @@ Comment on this statement with reference to modularity and construction bloat.
 Keeping instantiation and initialisation of components that comprise the object within the constructor is suitable as long as the object is simple. If it is more complex and the series of steps involved in its construction can differ, then keeping different versions of the construction process within the object can lead to construction bloat, where the object becomes bulky and less modular.
 If you use the Builder pattern, you move the construction out of the object into a separate, Builder class. There can be more than one of these, with different steps for constructing the object. This allows object construction to be independent of the components that make up the object, providing more control over the process.
 
+
 7a) What is the Facade Pattern?
 The Facade pattern is where you create an interface that provides a unified interface to a set of interfaces in a subsystem. It allows you to wrap a complicated subsystem within a simpler interface, that performs many other actions behind the scenes. For example, for the action of withdrawing money from an ATM, the other actions required are checking that the current account exists, that the PIN number entered is valid, that funds are available, and if so, making changes accordingly.
 
 7b) When, and why, would you use the Facade Pattern?
 You would use the Facade pattern when you want to simplify access to functionality in a complicated subsystem, hiding details of the underlying code.
 
+
 9. When should one make use of the Bridge Design pattern?
 You should use the Bridge pattern when you want to decouple an abstraction from its implementation so that the two can vary independently. It allows you to progressively add functionality while separating out major differences using abstract classes. 
 
 For example, you might want to create remote controls that work differently depending on specific televisions, but share some functions in common. Your first abstract class defines the buttons that will define volume for all devices, and subsequent classes will define functions that vary.
+
