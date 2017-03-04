@@ -10,3 +10,6 @@ You should use the Abstract Factory pattern to create families of related object
 
 5. “In general, the details of object construction, such as instantiating and initialising the components that comprise the object, are kept within the object, often as part of its constructor.”
 Comment on this statement with reference to modularity and construction bloat.
+
+Keeping instantiation and initialisation of components that comprise the object within the constructor is suitable as long as the object under construction is simple. If the object is more complex and the series of steps involved can differ, then keeping different versions of the construction process within the object can lead to construction bloat, where the object becomes bulky and less modular.
+If you use the Builder pattern, you move the construction out of the object into a separate, Builder class. There can be more than one of these, with different steps for constructing the object. This allows object construction to be independent of the components that make up the object, providing more control over the process.
