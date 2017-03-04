@@ -1,0 +1,17 @@
+2. In this question we examine the Singleton design pattern.
+(a) Why might you decide to lazy-initialise a singleton instance rather than initialise
+it in its field declaration? Provide code examples of both approaches to illustrate
+your answer.
+You might decide to lazy-initialise a singleton instance so that if the instance isn’t needed, it is never going to be created.
+Example of lazy instantiation:
+public static Singleton getInstance() {
+	if (firstInstance == null) {
+		firstInstance = new Singleton();
+	}
+}
+
+Example of eager instantiation:
+private static Singleton instance = new Singleton();
+public static Singleton getInstance() {
+	return instance;
+}
