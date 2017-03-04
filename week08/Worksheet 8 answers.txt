@@ -19,3 +19,8 @@ The Facade pattern is where you create an interface that provides a unified inte
 
 7b) When, and why, would you use the Facade Pattern?
 You would use the Facade pattern when you want to simplify access to functionality in a complicated subsystem, hiding details of the underlying code.
+
+9. When should one make use of the Bridge Design pattern?
+You should use the Bridge pattern when you want to decouple an abstraction from its implementation so that the two can vary independently. It allows you to progressively add functionality while separating out major differences using abstract classes. 
+
+For example, you might want to create remote controls that work differently depending on specific televisions, but share some functions in common. Your first abstract class defines the buttons that will define volume for all devices, and subsequent classes will define functions that vary.
