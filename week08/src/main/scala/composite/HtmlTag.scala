@@ -9,11 +9,11 @@ abstract class HtmlTag(tagName: String) {
 
   def setEndTag(tag: String)
 
-  def setTagBody(tagBody: String) = ???
+  def setTagBody(tagBody: String): Unit = ???
 
-  def addChildTag(htmlTag: HtmlTag) = ???
+  def addChildTag(htmlTag: HtmlTag): Unit = ???
 
-  def removeChildTag(htmlTag: HtmlTag) = ???
+  def removeChildTag(htmlTag: HtmlTag): Unit = ???
 
   def getChildren: List[HtmlTag] = ???
 
