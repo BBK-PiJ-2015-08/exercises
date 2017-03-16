@@ -52,7 +52,7 @@ public class Labels extends Application {
 
         Scene scene = new Scene(root, 300, 250);
 
-        primaryStage.setTitle("JavaFX UI Components");
+        primaryStage.setTitle("Labels");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
