@@ -1,12 +1,9 @@
 package javafxuicomponents;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -47,16 +44,7 @@ public class Labels extends Application {
             label3.setScaleX(1);
             label3.setScaleY(1);
         });
-//        Button btn = new Button();
-//        btn.setText("Say 'Hello World'");
-//        btn.setOnAction(new EventHandler<ActionEvent>() {
-//
-//            @Override
-//            public void handle(ActionEvent event) {
-//                System.out.println("Hello World!");
-//            }
-//        });
-//
+
         StackPane root = new StackPane();
         root.getChildren().add(label1);
         root.getChildren().add(label2);
