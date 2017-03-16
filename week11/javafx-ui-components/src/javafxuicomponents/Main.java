@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -34,6 +35,16 @@ public class Main extends Application {
         //A label with text to be wrapped
         Label label3 = new Label("A label with text that really needs to be wrapped to fit in the window");
         label3.setWrapText(true);
+
+        label3.setOnMouseEntered((MouseEvent e) -> {
+            label3.setScaleX(1.5);
+            label3.setScaleY(1.5);
+        });
+
+        label3.setOnMouseExited((MouseEvent e) -> {
+            label3.setScaleX(1);
+            label3.setScaleY(1);
+        });
 //        Button btn = new Button();
 //        btn.setText("Say 'Hello World'");
 //        btn.setOnAction(new EventHandler<ActionEvent>() {
