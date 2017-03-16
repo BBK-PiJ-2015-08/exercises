@@ -6,8 +6,10 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -27,6 +29,16 @@ public class Buttons extends Application {
         //A button with the specified text caption and icon.
         Image imageOk = new Image(getClass().getResourceAsStream("ok.png"));
         Button button3 = new Button("Accept", new ImageView(imageOk));
+        DropShadow shadow = new DropShadow();
+        //Adding the shadow when the mouse cursor is on
+        button3.addEventHandler(MouseEvent.MOUSE_ENTERED, (MouseEvent e) -> {
+            button3.setEffect(shadow);
+        });
+
+        //Removing the shadow when the mouse cursor is off
+        button3.addEventHandler(MouseEvent.MOUSE_EXITED, (MouseEvent e) -> {
+            button3.setEffect(null);
+        });
         StackPane.setAlignment(button3, Pos.BOTTOM_LEFT);
 
         Image imageDecline = new Image(getClass().getResourceAsStream("not.png"));
