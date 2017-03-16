@@ -23,12 +23,14 @@ public class Main extends Application {
         label1.setGraphic(new ImageView(image));
         label1.setTextFill(Color.web("#0076a3"));
         //A label with the text element
-        Label label2 = new Label("Search");
+        Label label2 = new Label ("Values");
+        label2.setFont(new Font("Cambria", 32));
+        label2.setRotate(270);
+        label2.setTranslateY(50);
 
         //Use a constructor of the Font class
         label1.setFont(new Font("Arial", 30));
-        //Use the font method of the Font class
-        label2.setFont(Font.font("Cambria", 32));
+
         //A label with text to be wrapped
         Label label3 = new Label("A label with text that really needs to be wrapped to fit in the window");
         label3.setWrapText(true);
