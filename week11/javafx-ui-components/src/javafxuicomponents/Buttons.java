@@ -20,6 +20,10 @@ public class Buttons extends Application {
         StackPane.setAlignment(button1, Pos.TOP_CENTER);
         //A button with the specified text caption.
         Button button2 = new Button("Accept");
+        button2.setOnAction((ActionEvent e) -> {
+            button2.setText("Accepted");
+        });
+
         //A button with the specified text caption and icon.
         Image imageOk = new Image(getClass().getResourceAsStream("ok.png"));
         Button button3 = new Button("Accept", new ImageView(imageOk));
