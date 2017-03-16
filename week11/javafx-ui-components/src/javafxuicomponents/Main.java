@@ -4,12 +4,13 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -23,6 +24,11 @@ public class Main extends Application {
         label1.setTextFill(Color.web("#0076a3"));
         //A label with the text element
         Label label2 = new Label("Search");
+
+        //Use a constructor of the Font class
+        label1.setFont(new Font("Arial", 30));
+        //Use the font method of the Font class
+        label2.setFont(Font.font("Cambria", 32));
         //A label with the text element and graphical icon
 //        Image image = new Image(getClass().getResourceAsStream("labels.jpg"));
 //        Label label3 = new Label("Search", new ImageView(image));
@@ -38,6 +44,8 @@ public class Main extends Application {
 //
         StackPane root = new StackPane();
         root.getChildren().add(label1);
+        root.getChildren().add(label2);
+//        root.getChildren().add(label3);
 
         Scene scene = new Scene(root, 300, 250);
 
