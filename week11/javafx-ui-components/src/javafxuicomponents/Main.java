@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        //An empty label
+        //A label with the text element and graphical icon
         Label label1 = new Label("Search");
         Image image = new Image(getClass().getResourceAsStream("labels.jpg"));
         label1.setGraphic(new ImageView(image));
@@ -29,9 +29,9 @@ public class Main extends Application {
         label1.setFont(new Font("Arial", 30));
         //Use the font method of the Font class
         label2.setFont(Font.font("Cambria", 32));
-        //A label with the text element and graphical icon
-//        Image image = new Image(getClass().getResourceAsStream("labels.jpg"));
-//        Label label3 = new Label("Search", new ImageView(image));
+        //A label with text to be wrapped
+        Label label3 = new Label("A label that needs to be wrapped");
+        label3.setWrapText(true);
 //        Button btn = new Button();
 //        btn.setText("Say 'Hello World'");
 //        btn.setOnAction(new EventHandler<ActionEvent>() {
