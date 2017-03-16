@@ -3,6 +3,7 @@ package javafxuicomponents;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
@@ -23,6 +24,7 @@ public class Labels extends Application {
         Image image = new Image(getClass().getResourceAsStream("labels.jpg"));
         label1.setGraphic(new ImageView(image));
         label1.setTextFill(Color.web("#0076a3"));
+        StackPane.setAlignment(label1, Pos.TOP_CENTER);
         //A label with the text element
         Label label2 = new Label ("Values");
         label2.setFont(new Font("Cambria", 32));
