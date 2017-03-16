@@ -30,7 +30,7 @@ public class Main extends Application {
         //Use the font method of the Font class
         label2.setFont(Font.font("Cambria", 32));
         //A label with text to be wrapped
-        Label label3 = new Label("A label that needs to be wrapped");
+        Label label3 = new Label("A label with text that really needs to be wrapped to fit in the window");
         label3.setWrapText(true);
 //        Button btn = new Button();
 //        btn.setText("Say 'Hello World'");
@@ -45,7 +45,7 @@ public class Main extends Application {
         StackPane root = new StackPane();
         root.getChildren().add(label1);
         root.getChildren().add(label2);
-//        root.getChildren().add(label3);
+        root.getChildren().add(label3);
 
         Scene scene = new Scene(root, 300, 250);
 
