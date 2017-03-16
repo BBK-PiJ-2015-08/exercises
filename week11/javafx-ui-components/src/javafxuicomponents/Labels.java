@@ -14,7 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Labels extends Application {
 
     @Override
     public void start(Stage primaryStage) {
