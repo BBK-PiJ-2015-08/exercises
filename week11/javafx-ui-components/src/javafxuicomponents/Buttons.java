@@ -23,12 +23,18 @@ public class Buttons extends Application {
         //A button with the specified text caption and icon.
         Image imageOk = new Image(getClass().getResourceAsStream("ok.png"));
         Button button3 = new Button("Accept", new ImageView(imageOk));
-        StackPane.setAlignment(button3, Pos.BOTTOM_CENTER);
+        StackPane.setAlignment(button3, Pos.BOTTOM_LEFT);
+
+        Image imageDecline = new Image(getClass().getResourceAsStream("not.png"));
+        Button button4 = new Button();
+        button4.setGraphic(new ImageView(imageDecline));
+        StackPane.setAlignment(button4, Pos.BOTTOM_RIGHT);
 
         StackPane root = new StackPane();
         root.getChildren().add(button1);
         root.getChildren().add(button2);
         root.getChildren().add(button3);
+        root.getChildren().add(button4);
 
         Scene scene = new Scene(root, 300, 250);
 
