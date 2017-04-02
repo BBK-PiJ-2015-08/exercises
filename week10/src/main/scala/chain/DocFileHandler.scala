@@ -12,7 +12,7 @@ case class DocFileHandler(s: String) extends Handler {
       println("File not supported")
     } else {
       if (file.fileType == "doc") {
-        println("Process and saving " + file.fileType + "file... by " + getHandlerName())
+        println("Process and saving " + file.fileType + " file... by " + getHandlerName())
       } else {
         println("Doc Handler forwards request to " + handler.getHandlerName())
         handler.process(file)

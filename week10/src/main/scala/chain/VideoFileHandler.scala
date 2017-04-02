@@ -12,7 +12,7 @@ case class VideoFileHandler(s: String) extends Handler {
       println("File not supported")
     } else {
       if (file.fileType == "video") {
-        println("Process and saving " + file.fileType + "file... by " + getHandlerName())
+        println("Process and saving " + file.fileType + " file... by " + getHandlerName())
       } else {
         println("Video Handler forwards request to " + handler.getHandlerName())
         handler.process(file)

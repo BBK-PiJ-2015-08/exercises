@@ -12,7 +12,7 @@ case class ImageFileHandler(s: String) extends Handler {
       println("File not supported")
     } else {
       if (file.fileType == "image") {
-        println("Process and saving " + file.fileType + "file... by " + getHandlerName())
+        println("Process and saving " + file.fileType + " file... by " + getHandlerName())
       } else {
         println("File not supported")
       }
