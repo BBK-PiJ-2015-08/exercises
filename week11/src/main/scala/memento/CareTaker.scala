@@ -10,6 +10,7 @@ case class CareTaker() {
 
   def saveMemento(memento: Memento, savepointName: String): Unit = {
     savepointStorage.put(savepointName, memento)
+    println("Saving state..." + savepointName)
   }
 
   def getMemento(savepointName: String): Memento = {
@@ -18,5 +19,6 @@ case class CareTaker() {
 
   def clearSavepoints(): Unit = {
     savepointStorage.clear()
+    println("Clearing all save points...")
   }
 }

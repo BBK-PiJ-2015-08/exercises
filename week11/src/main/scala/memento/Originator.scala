@@ -10,14 +10,12 @@ case class Originator(
   createSavepoint("INITIAL")
 
   def createSavepoint(savepointName: String): Unit = {
-    savepointName
-    println("Saving state..." + savepointName)
+    careTaker.saveMemento(new Memento(x, y), savepointName)
     lastUndoSavepoint = savepointName
   }
 
   def undo(): Unit = {
     setOriginatorState(lastUndoSavepoint)
-    println("Undo at ..." + lastUndoSavepoint)
   }
 
   def undo(savepointName: String): Unit = setOriginatorState(savepointName)
@@ -29,6 +27,7 @@ case class Originator(
 
   private def setOriginatorState(savepointName: String): Unit = {
     var memento = careTaker.getMemento(savepointName)
+    println("Undo at ..." + savepointName)
   }
 
   override def toString(): String = "X: " + x + ", Y: " + y
