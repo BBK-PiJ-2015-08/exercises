@@ -8,7 +8,6 @@ case class Originator(
   private var lastUndoSavepoint: String = _
 
   createSavepoint("INITIAL")
-  println("Saving state... INITIAL")
 
   def createSavepoint(savepointName: String): Unit = {
     savepointName
