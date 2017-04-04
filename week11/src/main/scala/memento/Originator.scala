@@ -10,7 +10,10 @@ case class Originator(
   createSavepoint("INITIAL")
   println("Saving state... INITIAL")
 
-  def createSavepoint(savepointName: String): Unit = savepointName
+  def createSavepoint(savepointName: String): Unit = {
+    savepointName
+    println("Saving state..." + savepointName)
+  }
 
   def undo(): Unit = setOriginatorState(lastUndoSavepoint)
 
