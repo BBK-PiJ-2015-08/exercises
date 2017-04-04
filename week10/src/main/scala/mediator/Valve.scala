@@ -8,10 +8,12 @@ class Valve extends Colleague {
   def open(): Unit = {
     println("Valve is opened...")
     println("Filling water...")
+    mediator.closed()
   }
 
   def closed(): Unit = {
     println("Valve is closed...")
+    mediator.on()
   }
 
 }
