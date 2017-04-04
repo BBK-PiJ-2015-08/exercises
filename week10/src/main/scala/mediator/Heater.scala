@@ -15,5 +15,6 @@ class Heater extends Colleague {
 
   def off(): Unit = {
     println("Heater is off...")
+    mediator.wash()
   }
 }
