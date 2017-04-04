@@ -27,6 +27,8 @@ case class Originator(
 
   private def setOriginatorState(savepointName: String): Unit = {
     var memento = careTaker.getMemento(savepointName)
+    x = memento.x
+    y = memento.y
     println("Undo at ..." + savepointName)
   }
 
