@@ -17,6 +17,12 @@ object AccessControlProvider {
 
   map.put("VP", new AccessControl("VP", "MODIFY REPORTS"))
 
-  def getAccessControlObject(controlLevel: String): AccessControl = ???
+  def getAccessControlObject(controlLevel: String): AccessControl = {
+    if (map.get(controlLevel).isDefined) {
+      map.get(controlLevel).get.clone()
+    } else {
+      throw new CloneNotSupportedException()
+    }
+  }
 
 }
