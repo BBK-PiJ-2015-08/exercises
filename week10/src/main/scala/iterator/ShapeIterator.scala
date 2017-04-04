@@ -17,5 +17,10 @@ class ShapeIterator(private var shapes: Array[Shape]) extends Iterator[Shape] {
     }
   }
 
-  override def remove(): Unit = ???
+  override def remove(): Unit = {
+    if (hasNext()) {
+      shapes(current) = null
+      shapes = shapes.filter(shape => shape != null)
+    }
+  }
 }
