@@ -6,5 +6,5 @@ case class Employee(
   var employeeDesignation: String
 ) {
 
-  override def toString(): String = ???
+  override def toString(): String = "Employee Name: " + employeeName + ", EmployeeDesignation: " + employeeDesignation + ", Employee Salary: " + employeeSalary
 }
