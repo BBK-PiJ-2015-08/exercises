@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class SingletonProtected implements Serializable {
     private static final long serialVersionUID = -1093810940935189395L;
-    private static SingletonProtected sc = new SingletonProtected();
+    private static SingletonProtected sc = null;
 
     private SingletonProtected() {
         if (sc != null) {
@@ -18,12 +18,17 @@ public class SingletonProtected implements Serializable {
         if (classLoader == null)
             classLoader = SingletonProtected.class.getClassLoader();
         return (classLoader.loadClass(classname));
-
-
     }
 
     public static SingletonProtected getInstance() {
-        return sc;
+        if(sc != null) {
+            throw new IllegalStateException("Already created.");
+        } else {
+            synchronized (SingletonProtected.class) {
+                sc = new SingletonProtected();
+                return sc;
+            }
+        }
     }
 
     private Object readResolve() throws ObjectStreamException {
