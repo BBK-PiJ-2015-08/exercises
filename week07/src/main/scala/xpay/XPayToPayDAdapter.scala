@@ -1,0 +1,5 @@
+package xpay
+
+class XPayToPayDAdapter {
+
+}
