@@ -8,7 +8,8 @@ case class HtmlElement(var tagName: String) extends HtmlTag {
 
   override def setTagBody(tagBody: String): Unit = this.tagBody = tagBody
   override def generateHtml(): Unit = {
-    println(startTag)
+    print(startTag)
+    print(tagBody)
     println(endTag)
   }
   override def accept(visitor: Visitor): Unit = visitor.visit(this)
