@@ -7,9 +7,9 @@ abstract class HtmlTag extends Element {
   def getEndTag(): String
   def setEndTag(tag: String): Unit
 
-  def setTagBody(tagBody: String): Unit = ???
-  def addChildTag(htmlTag: HtmlTag): Unit = ???
-  def removeChildTag(htmlTag: HtmlTag): Unit = ???
-  def getChildren(): List[HtmlTag] = ???
+  def setTagBody(tagBody: String): Unit = throw new UnsupportedOperationException
+  def addChildTag(htmlTag: HtmlTag): Unit = throw new UnsupportedOperationException
+  def removeChildTag(htmlTag: HtmlTag): Unit = throw new UnsupportedOperationException
+  def getChildren(): List[HtmlTag] = throw new UnsupportedOperationException
   def generateHtml(): Unit
 }
