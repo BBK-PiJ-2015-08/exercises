@@ -4,7 +4,6 @@ import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 
 object Sum extends App {
   val numbers = List(20, 18, 32, 28, 22, 42, 55, 48)
-//  val numbers = List(200000, 180000, 320000, 280000, 220000, 420000, 550000, 480000)
 
   val system = ActorSystem("sum")
 
