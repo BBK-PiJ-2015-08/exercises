@@ -16,7 +16,7 @@ class SumCollector(numbers: List[Int]) extends Actor with ActorLogging {
   context.actorOf(Props(new SumCalculator)) ! numbers
 
   def receive = {
-    case (numbers: Int, sum: Int) => {
+    case (numbers: List[Int], sum: Int) => {
       log.info(s"sum for List is $sum")
 
       list = numbers
@@ -31,10 +31,10 @@ class SumCollector(numbers: List[Int]) extends Actor with ActorLogging {
 
 class SumCalculator extends Actor {
   def receive = {
-    case numbers: Int => sender ! (sum(numbers))
+    case numbers: List[Int] => sender ! (sum(numbers))
   }
 
-  private def sum(num: Int) = sumAccumulator(numbers, 0)
+  private def sum(numbers: List[Int]) = sumAccumulator(numbers, 0)
 
   @tailrec private def sumAccumulator(numbers: List[Int], acc: Int): Int = {
     numbers match {
