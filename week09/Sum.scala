@@ -7,7 +7,7 @@ object Sum extends App {
 
   val system = ActorSystem("sum")
 
-  val collector = system.actorOf(Props(new SumCollector(numbers)), "collector")
+  val collector = system.actorOf(Props(new SumCollector(numbers)), name = "collector")
 }
 
 class SumCollector(numbers: List[Int]) extends Actor with ActorLogging {
